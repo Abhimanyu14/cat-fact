@@ -1,3 +1,11 @@
 <resources>
+
+    <!-- app name -->
     <string name="app_name">Catfact</string>
+
+    <!-- tools text -->
+    <string name="activity_main_tools_text_fact">
+        Cats don\'t have sweat glands over their bodies like humans do.
+        Instead they sweat only through their paws.
+    </string>
 </resources>
