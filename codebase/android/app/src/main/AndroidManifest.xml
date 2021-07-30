@@ -3,6 +3,8 @@
     package="com.makeappssimple.abhimanyu.catfact.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- network connectivity -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="false"
