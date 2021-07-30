@@ -16,11 +16,11 @@ class MainActivityViewModel : ViewModel() {
     private val _status = MutableLiveData<ApiStatus>()
     val status: LiveData<ApiStatus> = _status
     
-    private val _catfact = MutableLiveData<CatFact>()
-    val catfact: LiveData<CatFact> = _catfact
+    private val _catfacts = MutableLiveData<MutableList<CatFact>>()
+    val catfacts: LiveData<MutableList<CatFact>> = _catfacts
     
     init {
-        Log.e("Abhi", "View model created")
+        _catfacts.value = mutableListOf()
         getCatFact()
     }
     
@@ -29,13 +29,17 @@ class MainActivityViewModel : ViewModel() {
             _status.value = ApiStatus.LOADING
             Log.e("Abhi", "Fetching")
             try {
-                _catfact.value = Api.retrofitService.getCatFact()
+                for (i in 0..25) {
+                    val tempList = _catfacts.value
+                    tempList?.add(Api.retrofitService.getCatFact())
+                    _catfacts.value = tempList
+                }
+                Log.e("Abhi viewmodel: \n", catfacts.value!!.joinToString("\n") { it.fact })
                 _status.value = ApiStatus.DONE
                 Log.e("Abhi", "Done")
-            } catch (e: Exception) {
+            } catch (exception: Exception) {
                 _status.value = ApiStatus.ERROR
-                _catfact.value = CatFact("", -1)
-                Log.e("Abhi", "Error: $e")
+                Log.e("Abhi", "Error: $exception")
             }
         }
     }

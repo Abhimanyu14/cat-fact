@@ -29,9 +29,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
         
-        viewModel.catfact.observe(this, { catfact ->
-            Log.e("Abhi", catfact.fact)
-            binding.activityMainTextviewFact.text = catfact.fact
+        viewModel.catfacts.observe(this, { catfacts ->
+            Log.e("Abhi Catfacts: \n", catfacts.joinToString("\n ") { it.fact })
+            if (catfacts.size > 1) {
+                binding.activityMainTextviewFact.text = catfacts[0].fact
+            }
         })
         
         ConnectivityLiveData(this).observe(this, { networkState ->
