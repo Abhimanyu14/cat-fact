@@ -1,9 +1,11 @@
 package com.makeappssimple.abhimanyu.catfact.android.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.makeappssimple.abhimanyu.catfact.android.databinding.ActivityMainBinding
 import com.makeappssimple.abhimanyu.catfact.android.utils.ConnectivityLiveData
 
@@ -19,9 +21,17 @@ class MainActivity : AppCompatActivity() {
         
         binding.lifecycleOwner = this
         
+        viewModel.status.observe(this, { status ->
+            binding.activityMainProgressbar.visibility = if (status == ApiStatus.LOADING) {
+                VISIBLE
+            } else {
+                GONE
+            }
+        })
+        
         viewModel.catfact.observe(this, { catfact ->
             Log.e("Abhi", catfact.fact)
-            binding.fact.text = catfact.fact
+            binding.activityMainTextviewFact.text = catfact.fact
         })
         
         ConnectivityLiveData(this).observe(this, { networkState ->
