@@ -3,23 +3,24 @@ package com.makeappssimple.abhimanyu.catfact.android.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import com.makeappssimple.abhimanyu.catfact.android.R
+import com.makeappssimple.abhimanyu.catfact.android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     
     private val viewModel: MainActivityViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         
-        viewModel.catfact.observe(this, {
-            Log.e("Abhi", it.fact)
-            findViewById<TextView>(R.id.fact).text = it.fact
+        binding.lifecycleOwner = this
+        
+        viewModel.catfact.observe(this, { catfact ->
+            Log.e("Abhi", catfact.fact)
+            binding.fact.text = catfact.fact
         })
     }
 }
