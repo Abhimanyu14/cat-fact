@@ -29,12 +29,14 @@ class MainActivityViewModel : ViewModel() {
             _status.value = ApiStatus.LOADING
             Log.e("Abhi", "Fetching")
             try {
-                for (i in 0..25) {
-                    val tempList = _catfacts.value
-                    tempList?.add(Api.retrofitService.getCatFact())
-                    _catfacts.value = tempList
+                val tempList = mutableListOf<CatFact>()
+                for (i in 0..10) {
+                    tempList.add(Api.retrofitService.getCatFact())
                 }
-                Log.e("Abhi viewmodel: \n", catfacts.value!!.joinToString("\n") { it.fact })
+                catfacts.value?.forEachIndexed { index, catFact ->
+                    Log.e("Abhi viewmodel:", "$index ${catFact.fact}")
+                }
+                _catfacts.value = tempList
                 _status.value = ApiStatus.DONE
                 Log.e("Abhi", "Done")
             } catch (exception: Exception) {

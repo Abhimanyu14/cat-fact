@@ -3,7 +3,10 @@ package com.makeappssimple.abhimanyu.catfact.android.utils
 import android.annotation.TargetApi
 import android.content.Context
 import android.content.Context.CONNECTIVITY_SERVICE
-import android.net.*
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkRequest
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData

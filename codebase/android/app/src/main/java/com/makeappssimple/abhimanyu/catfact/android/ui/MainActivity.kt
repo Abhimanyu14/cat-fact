@@ -1,7 +1,6 @@
 package com.makeappssimple.abhimanyu.catfact.android.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.activity.viewModels
@@ -20,19 +19,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         
         binding.lifecycleOwner = this
+        binding.viewModel = viewModel
+        binding.activityMainRecyclerView.adapter = MainActivityRecyclerViewAdapter()
         
         viewModel.status.observe(this, { status ->
             binding.activityMainProgressbar.visibility = if (status == ApiStatus.LOADING) {
                 VISIBLE
             } else {
                 GONE
-            }
-        })
-        
-        viewModel.catfacts.observe(this, { catfacts ->
-            Log.e("Abhi Catfacts: \n", catfacts.joinToString("\n ") { it.fact })
-            if (catfacts.size > 1) {
-                binding.activityMainTextviewFact.text = catfacts[0].fact
             }
         })
         
