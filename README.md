@@ -7,3 +7,5 @@ A simple Android app demonstrating the following concepts.
 3. Coroutines
 4. Data binding
 5. Network connectivity
+6. Recycler view
+7. Binding Adapter
