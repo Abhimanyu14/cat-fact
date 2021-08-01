@@ -9,3 +9,4 @@ A simple Android app demonstrating the following concepts.
 5. Network connectivity
 6. Recycler view
 7. Binding Adapter
+8. Paging

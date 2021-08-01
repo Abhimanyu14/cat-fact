@@ -4,8 +4,11 @@
     <string name="app_name">Cat Fact</string>
 
     <!-- tools text -->
-    <string name="activity_main_tools_text_fact">
+    <string name="recyclerview_item_layout_tools_text_fact">
         Cats don\'t have sweat glands over their bodies like humans do.
         Instead they sweat only through their paws.
     </string>
+
+    <!-- activity_main.xml -->
+    <string name="recyclerview_item_layout_fact">%1$s. %2$s</string>
 </resources>
