@@ -1,3 +1,3 @@
 package com.makeappssimple.abhimanyu.catfact.android.network
 
-data class CatFact(val fact: String, val length: Int)
+data class CatFact(var id: Int?, val fact: String, val length: Int)
