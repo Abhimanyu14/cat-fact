@@ -28,11 +28,11 @@ Creators of https://catfact.ninja/fact
 Photo by [Alex Andrews](https://www.pexels.com/@alex-andrews-271121?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/selective-focus-photography-of-cat-821736/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 ### No internet image
-<img src="resources/no_internet.svg" alt="No internet image" width="300"/>  
+<img src="resources/no_internet.svg" alt="No internet image" width="200"/>  
 
 Image by <a href="https://pixabay.com/users/io-images-1096650/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3471739">IO-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3471739">Pixabay</a>
 
-## Refererred artcles
+## Refererred articles
 
 - <a href="https://proandroiddev.com/how-to-use-the-paging-3-library-in-android-5d128bb5b1d8">How to Use the Paging 3 Library in Android</a>
 
