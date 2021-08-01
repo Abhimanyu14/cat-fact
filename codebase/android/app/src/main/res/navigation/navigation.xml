@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.HomeFragment"
+        android:label="Cat Fact"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_creditsFragment"
+            app:destination="@id/creditsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.CreditsFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits" />
+
+</navigation>

@@ -3,8 +3,8 @@
     <!-- app name -->
     <string name="app_name">Cat Fact</string>
 
-    <!--activity_main.xml-->
-    <string name="activity_main_no_internet_connection">No internet connection</string>
+    <!--fragment_home.xml-->
+    <string name="fragment_home_no_internet_connection">No internet connection</string>
 
     <!-- recyclerview_item_layout.xml -->
     <string name="recyclerview_item_layout_tools_text_fact">
@@ -16,5 +16,8 @@
     <!-- recyclerview_loading_state_layout.xml -->
     <string name="recyclerview_loading_state_layout_error">Error in fetching data</string>
     <string name="recyclerview_loading_state_layout_retry">Retry</string>
+
+    <!-- menu_appbar.xml -->
+    <string name="action_credits">Credits</string>
 
 </resources>
