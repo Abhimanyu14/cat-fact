@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/recyclerview_item_layout_textview_fact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
