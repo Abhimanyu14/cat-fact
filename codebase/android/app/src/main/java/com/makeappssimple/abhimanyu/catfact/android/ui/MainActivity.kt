@@ -22,24 +22,13 @@ class MainActivity : AppCompatActivity() {
         val adapter = MainActivityRecyclerViewAdapter()
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-        binding.activityMainRecyclerView.adapter = adapter
-        
+        binding.activityMainRecyclerView.adapter =
+            adapter.withLoadStateFooter(footer = MainActivityRecyclerViewLoadingStateAdapter { adapter.retry() })
         lifecycleScope.launch {
             viewModel.pagedCatFacts.collectLatest {
                 adapter.submitData(it)
             }
         }
-        
-        viewModel.pagedCatFacts
-        /*
-        viewModel.apiStatus.observe(this, { status ->
-            binding.activityMainProgressbar.visibility = if (status == ApiStatus.LOADING) {
-                VISIBLE
-            } else {
-                GONE
-            }
-        })
-        */
         
         ConnectivityLiveData(this).observe(this, { networkState ->
             // TODO: Use 'networkState' to detect connectivity
