@@ -1,6 +1,5 @@
 package com.makeappssimple.abhimanyu.catfact.android.network
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 
@@ -8,21 +7,22 @@ class CatFactPagingSource(
     private val apiService: ApiService,
 ) : PagingSource<Int, CatFact>() {
     
-    var tempKey = 1
-    
+    private var localKey = 1
     override suspend fun load(
         params: LoadParams<Int>
     ): LoadResult<Int, CatFact> {
         return try {
-            val apiResponse = apiService.getCatFact()
-            apiResponse.id = tempKey
+            val apiResponse = apiService.getCatFact().apply { id = localKey++ }
             LoadResult.Page(
                 data = listOf(apiResponse),
                 prevKey = null,
-                nextKey = tempKey++,
+                nextKey = if (localKey < 16) {
+                    localKey
+                } else {
+                    null
+                },
             )
         } catch (e: Exception) {
-            Log.e("Abhi", "Error in loading data : $e")
             LoadResult.Error(e)
         }
     }

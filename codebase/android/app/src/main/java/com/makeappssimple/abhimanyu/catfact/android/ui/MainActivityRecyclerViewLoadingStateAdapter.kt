@@ -1,6 +1,5 @@
 package com.makeappssimple.abhimanyu.catfact.android.ui
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -20,11 +19,8 @@ class MainActivityRecyclerViewLoadingStateAdapter(
                 loadState !is LoadState.Loading
             binding.recyclerviewLoadingStateLayoutTextviewError.isVisible =
                 loadState !is LoadState.Loading
-            Log.e("Abhi", "state 1 ${loadState !is LoadState.Loading}")
             binding.recyclerviewLoadingStateLayoutProgressbar.isVisible =
                 loadState is LoadState.Loading
-            Log.e("Abhi", "state 2 ${loadState is LoadState.Loading}")
-            Log.e("Abhi", "loading state $loadState")
             if (loadState is LoadState.Error) {
                 binding.recyclerviewLoadingStateLayoutTextviewError.text =
                     loadState.error.localizedMessage

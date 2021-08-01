@@ -70,6 +70,9 @@ dependencies {
     // Paging
     implementation "androidx.paging:paging-runtime-ktx:3.0.1"
 
+    // Coil
+    implementation "io.coil-kt:coil:1.2.2"
+
     // Testing
     testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:1.1.3"
