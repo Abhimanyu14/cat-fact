@@ -8,5 +8,5 @@ A simple Android app demonstrating the following concepts.
 4. Data binding
 5. Network connectivity
 6. Recycler view
-7. Binding Adapter
+7. Flow
 8. Paging
