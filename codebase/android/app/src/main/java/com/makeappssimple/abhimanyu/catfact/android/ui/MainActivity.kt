@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = viewModel
         binding.activityMainRecyclerView.adapter = MainActivityRecyclerViewAdapter()
         
-        viewModel.status.observe(this, { status ->
+        viewModel.apiStatus.observe(this, { status ->
             binding.activityMainProgressbar.visibility = if (status == ApiStatus.LOADING) {
                 VISIBLE
             } else {

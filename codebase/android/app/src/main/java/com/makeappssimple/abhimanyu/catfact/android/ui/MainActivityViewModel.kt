@@ -13,34 +13,34 @@ enum class ApiStatus { LOADING, ERROR, DONE }
 
 class MainActivityViewModel : ViewModel() {
     
-    private val _status = MutableLiveData<ApiStatus>()
-    val status: LiveData<ApiStatus> = _status
+    private val _apiStatus = MutableLiveData<ApiStatus>()
+    val apiStatus: LiveData<ApiStatus> = _apiStatus
     
-    private val _catfacts = MutableLiveData<MutableList<CatFact>>()
-    val catfacts: LiveData<MutableList<CatFact>> = _catfacts
+    private val _catFacts = MutableLiveData<MutableList<CatFact>>()
+    val catFacts: LiveData<MutableList<CatFact>> = _catFacts
     
     init {
-        _catfacts.value = mutableListOf()
+        _catFacts.value = mutableListOf()
         getCatFact()
     }
     
     private fun getCatFact() {
         viewModelScope.launch {
-            _status.value = ApiStatus.LOADING
+            _apiStatus.value = ApiStatus.LOADING
             Log.e("Abhi", "Fetching")
             try {
                 val tempList = mutableListOf<CatFact>()
                 for (i in 0..10) {
                     tempList.add(Api.retrofitService.getCatFact())
                 }
-                catfacts.value?.forEachIndexed { index, catFact ->
+                catFacts.value?.forEachIndexed { index, catFact ->
                     Log.e("Abhi viewmodel:", "$index ${catFact.fact}")
                 }
-                _catfacts.value = tempList
-                _status.value = ApiStatus.DONE
+                _catFacts.value = tempList
+                _apiStatus.value = ApiStatus.DONE
                 Log.e("Abhi", "Done")
             } catch (exception: Exception) {
-                _status.value = ApiStatus.ERROR
+                _apiStatus.value = ApiStatus.ERROR
                 Log.e("Abhi", "Error: $exception")
             }
         }
