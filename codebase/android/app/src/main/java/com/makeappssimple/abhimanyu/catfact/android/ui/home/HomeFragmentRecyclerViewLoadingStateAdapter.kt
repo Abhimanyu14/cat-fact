@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,9 +8,9 @@ import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.makeappssimple.abhimanyu.catfact.android.databinding.RecyclerviewLoadingStateLayoutBinding
 
-class MainActivityRecyclerViewLoadingStateAdapter(
+class HomeFragmentRecyclerViewLoadingStateAdapter(
     private val retry: () -> Unit
-) : LoadStateAdapter<MainActivityRecyclerViewLoadingStateAdapter.MainActivityRecyclerViewLoadingStateViewHolder>() {
+) : LoadStateAdapter<HomeFragmentRecyclerViewLoadingStateAdapter.MainActivityRecyclerViewLoadingStateViewHolder>() {
     
     inner class MainActivityRecyclerViewLoadingStateViewHolder(private var binding: RecyclerviewLoadingStateLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {

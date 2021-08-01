@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.makeappssimple.abhimanyu.catfact.android.ui.HomeViewModel" />
+            type="com.makeappssimple.abhimanyu.catfact.android.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,7 +14,7 @@
         android:id="@+id/fragment_home_root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment">
+        tools:context=".ui.home.HomeFragment">
 
         <ImageView
             android:id="@+id/fragment_home_imageview_no_internet"

@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.home
 
 import android.os.Bundle
 import android.view.*
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class HomeFragment : Fragment() {
     
     private val viewModel: HomeViewModel by viewModels()
-    private val mainActivityRecyclerViewAdapter by lazy { MainActivityRecyclerViewAdapter() }
+    private val mainActivityRecyclerViewAdapter by lazy { HomeFragmentRecyclerViewAdapter() }
     private var initialConnectivityCheckCompleted: Boolean = false
     private lateinit var binding: FragmentHomeBinding
     
@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
         // Sets the adapter of the photosGrid RecyclerView
         binding.fragmentHomeRecyclerView.adapter =
             mainActivityRecyclerViewAdapter.withLoadStateFooter(
-                footer = MainActivityRecyclerViewLoadingStateAdapter {
+                footer = HomeFragmentRecyclerViewLoadingStateAdapter {
                     mainActivityRecyclerViewAdapter.retry()
                 }
             )

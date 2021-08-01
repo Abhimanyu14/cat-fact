@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.makeappssimple.abhimanyu.catfact.android.R
 import com.makeappssimple.abhimanyu.catfact.android.databinding.RecyclerviewItemLayoutBinding
-import com.makeappssimple.abhimanyu.catfact.android.network.CatFact
+import com.makeappssimple.abhimanyu.catfact.android.network.model.CatFact
 
-class MainActivityRecyclerViewAdapter :
-    PagingDataAdapter<CatFact, MainActivityRecyclerViewAdapter.MainActivityRecyclerViewHolder>(
+class HomeFragmentRecyclerViewAdapter :
+    PagingDataAdapter<CatFact, HomeFragmentRecyclerViewAdapter.MainActivityRecyclerViewHolder>(
         CatFactDiffCallback
     ) {
     

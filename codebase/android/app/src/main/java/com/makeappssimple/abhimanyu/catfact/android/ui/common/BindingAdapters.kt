@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.common
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

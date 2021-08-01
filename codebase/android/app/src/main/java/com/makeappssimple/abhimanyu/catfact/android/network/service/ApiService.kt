@@ -1,5 +1,6 @@
-package com.makeappssimple.abhimanyu.catfact.android.network
+package com.makeappssimple.abhimanyu.catfact.android.network.service
 
+import com.makeappssimple.abhimanyu.catfact.android.network.model.CatFact
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

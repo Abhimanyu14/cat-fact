@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.credits
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,7 +1,9 @@
-package com.makeappssimple.abhimanyu.catfact.android.network
+package com.makeappssimple.abhimanyu.catfact.android.network.datasource
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.makeappssimple.abhimanyu.catfact.android.network.model.CatFact
+import com.makeappssimple.abhimanyu.catfact.android.network.service.ApiService
 
 class CatFactPagingSource(
     private val apiService: ApiService,

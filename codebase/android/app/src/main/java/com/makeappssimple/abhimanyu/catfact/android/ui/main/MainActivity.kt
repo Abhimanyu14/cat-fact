@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.HomeFragment"
+        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.home.HomeFragment"
         android:label="Cat Fact"
         tools:layout="@layout/fragment_home">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/creditsFragment"
-        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.CreditsFragment"
+        android:name="com.makeappssimple.abhimanyu.catfact.android.ui.credits.CreditsFragment"
         android:label="Credits"
         tools:layout="@layout/fragment_credits" />
 

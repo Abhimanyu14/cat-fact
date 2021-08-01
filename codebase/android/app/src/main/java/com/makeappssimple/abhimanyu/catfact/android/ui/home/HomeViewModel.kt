@@ -1,4 +1,4 @@
-package com.makeappssimple.abhimanyu.catfact.android.ui
+package com.makeappssimple.abhimanyu.catfact.android.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,9 +6,9 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.makeappssimple.abhimanyu.catfact.android.network.Api
-import com.makeappssimple.abhimanyu.catfact.android.network.CatFact
-import com.makeappssimple.abhimanyu.catfact.android.network.CatFactPagingSource
+import com.makeappssimple.abhimanyu.catfact.android.network.datasource.CatFactPagingSource
+import com.makeappssimple.abhimanyu.catfact.android.network.model.CatFact
+import com.makeappssimple.abhimanyu.catfact.android.network.service.Api
 import kotlinx.coroutines.flow.Flow
 
 class HomeViewModel : ViewModel() {
