@@ -1,3 +1,6 @@
+/codebase/android/app/debug
+/codebase/android/app/release
+
 # Built application files
 *.apk
 *.aar
