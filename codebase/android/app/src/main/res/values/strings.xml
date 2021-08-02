@@ -3,8 +3,35 @@
     <!-- app name -->
     <string name="app_name">Cat Fact</string>
 
-    <!--fragment_home.xml-->
+    <!-- fragment_home.xml -->
     <string name="fragment_home_no_internet_connection">No internet connection</string>
+
+    <!-- fragment_credits.xml -->
+    <string name="fragment_credits_heading_api">API</string>
+    <string name="fragment_credits_heading_images">Images</string>
+    <string name="fragment_credits_api">
+        Creators of the API <a href="https://catfact.ninja/fact">https://catfact.ninja/fact</a>
+    </string>
+    <string name="fragment_credits_app_logo">
+        Photo by
+        <a href="https://www.pexels.com/@alex-andrews-271121?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">
+            Alex Andrews
+        </a>
+        from
+        <a href="https://www.pexels.com/photo/selective-focus-photography-of-cat-821736/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">
+            Pexels
+        </a>
+    </string>
+    <string name="fragment_credits_no_internet_connection">
+        Image by
+        <a href="https://pixabay.com/users/io-images-1096650/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3471739">
+            IO-Images
+        </a>
+        from
+        <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3471739">
+            Pixabay
+        </a>
+    </string>
 
     <!-- recyclerview_item_layout.xml -->
     <string name="recyclerview_item_layout_tools_text_fact">
@@ -19,5 +46,6 @@
 
     <!-- menu_appbar.xml -->
     <string name="action_credits">Credits</string>
+
 
 </resources>
