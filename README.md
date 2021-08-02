@@ -14,6 +14,7 @@ A simple Android app developed to demonstrate the following concepts.
 8. Paging
 9. Coil
 10. Binding adapters
+11. Navigation graph
 
 # Credits
 

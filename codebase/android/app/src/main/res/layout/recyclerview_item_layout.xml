@@ -14,17 +14,17 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/recyclerview_item_layout_textview_fact"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/recyclerview_item_layout_tools_text_fact" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

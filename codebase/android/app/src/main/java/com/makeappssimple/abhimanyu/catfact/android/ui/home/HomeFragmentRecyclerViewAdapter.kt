@@ -13,7 +13,7 @@ class HomeFragmentRecyclerViewAdapter :
     PagingDataAdapter<CatFact, HomeFragmentRecyclerViewAdapter.MainActivityRecyclerViewHolder>(
         CatFactDiffCallback
     ) {
-    
+
     class MainActivityRecyclerViewHolder(private var binding: RecyclerviewItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(catFact: CatFact?) {
@@ -26,17 +26,17 @@ class HomeFragmentRecyclerViewAdapter :
             }
         }
     }
-    
+
     object CatFactDiffCallback : DiffUtil.ItemCallback<CatFact>() {
         override fun areItemsTheSame(oldItem: CatFact, newItem: CatFact): Boolean {
             return oldItem.id == newItem.id
         }
-        
+
         override fun areContentsTheSame(oldItem: CatFact, newItem: CatFact): Boolean {
             return oldItem == newItem
         }
     }
-    
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -45,11 +45,11 @@ class HomeFragmentRecyclerViewAdapter :
             RecyclerviewItemLayoutBinding.inflate(
                 LayoutInflater.from(
                     parent.context
-                )
+                ), parent, false
             )
         )
     }
-    
+
     override fun onBindViewHolder(holder: MainActivityRecyclerViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
