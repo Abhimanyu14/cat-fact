@@ -16,7 +16,7 @@ A simple Android app developed to demonstrate the following concepts.
 10. Binding adapters
 11. Navigation graph
 
-<img src="resources/screencapture.gif" height="40%"/>
+<img src="resources/screencapture.gif" width="300"/>
 
 # Credits
 
