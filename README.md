@@ -16,6 +16,8 @@ A simple Android app developed to demonstrate the following concepts.
 10. Binding adapters
 11. Navigation graph
 
+![screencapture](/resources/screencapture.gif)
+
 # Credits
 
 ## API
