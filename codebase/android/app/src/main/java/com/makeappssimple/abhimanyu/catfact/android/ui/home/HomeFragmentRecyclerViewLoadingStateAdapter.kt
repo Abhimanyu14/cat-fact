@@ -6,6 +6,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.makeappssimple.abhimanyu.catfact.android.R
 import com.makeappssimple.abhimanyu.catfact.android.databinding.RecyclerviewLoadingStateLayoutBinding
 import com.makeappssimple.abhimanyu.catfact.android.utils.logError
 
@@ -28,7 +29,7 @@ class HomeFragmentRecyclerViewLoadingStateAdapter(
 
             if (loadState is LoadState.Error) {
                 binding.recyclerviewLoadingStateLayoutTextviewError.text =
-                    loadState.error.localizedMessage
+                    binding.root.context.resources.getString(R.string.recyclerview_loading_state_layout_error)
             }
 
             binding.recyclerviewLoadingStateLayoutButtonRetry.setOnClickListener {
