@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeFragment">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fragment_home_imageview_no_internet"
             android:layout_width="64dp"
             android:layout_height="64dp"

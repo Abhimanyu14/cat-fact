@@ -32,6 +32,8 @@
             Pixabay
         </a>
     </string>
+    <string name="fragment_credits_content_description_no_internet">No internet image</string>
+    <string name="fragment_credits_content_description_app_logo">App logo</string>
 
     <!-- recyclerview_item_layout.xml -->
     <string name="recyclerview_item_layout_tools_text_fact">
