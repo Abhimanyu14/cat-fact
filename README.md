@@ -9,12 +9,13 @@ A simple Android app developed to demonstrate the following concepts.
 3. Coroutines
 4. Data binding
 5. Network connectivity
-6. Recycler view
-7. Flow
-8. Paging
+6. Recycler view, Constraint layout
+7. Live Data and Flow
+8. Paging 3
 9. Coil
 10. Binding adapters
 11. Navigation graph
+12. Proguard
 
 <img src="resources/screencapture.gif" width="300"/>
 
