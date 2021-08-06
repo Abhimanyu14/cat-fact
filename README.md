@@ -16,7 +16,7 @@ A simple Android app developed to demonstrate the following concepts.
 10. Binding adapters
 11. Navigation graph
 12. Proguard
-13. Open source licences
+13. Open source licenses
 
 <img src="resources/screencapture.gif" width="300"/>
 
