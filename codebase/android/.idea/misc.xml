@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_copyright_black_24.xml" value="0.4230769230769231" />
         <entry key="app/src/main/res/drawable/ic_no_internet.xml" value="0.4296875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.39947916666666666" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_credits.xml" value="0.3954248366013072" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.41354166666666664" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.36222627737226276" />

@@ -3,8 +3,23 @@
     <!-- app name -->
     <string name="app_name">Cat Fact</string>
 
+
     <!-- fragment_home.xml -->
     <string name="fragment_home_no_internet_connection">No internet connection</string>
+
+    <!-- fragment_settings.xml -->
+    <string name="fragment_settings_credits">Credits</string>
+    <string name="fragment_settings_about">About Cat Fact app</string>
+    <string name="fragment_settings_licences">Open source licenses</string>
+
+    <!-- fragment_about.xml -->
+    <string name="fragment_about_info">
+        This is an open source app
+        created by
+        <a href="https://github.com/Abhimanyu14">Abhimanyu</a>
+        and hosted in
+        <a href="https://github.com/Abhimanyu14/cat-fact">GitHub</a>
+    </string>
 
     <!-- fragment_credits.xml -->
     <string name="fragment_credits_heading_api">API</string>
@@ -35,6 +50,7 @@
     <string name="fragment_credits_content_description_no_internet">No internet image</string>
     <string name="fragment_credits_content_description_app_logo">App logo</string>
 
+
     <!-- recyclerview_item_layout.xml -->
     <string name="recyclerview_item_layout_tools_text_fact">
         Cats don\'t have sweat glands over their bodies like humans do.
@@ -46,8 +62,8 @@
     <string name="recyclerview_loading_state_layout_error">Error in fetching data</string>
     <string name="recyclerview_loading_state_layout_retry">Retry</string>
 
+
     <!-- menu_appbar.xml -->
     <string name="action_settings">Settings</string>
-
 
 </resources>
