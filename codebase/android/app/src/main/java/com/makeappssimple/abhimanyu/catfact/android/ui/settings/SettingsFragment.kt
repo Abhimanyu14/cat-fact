@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
+import com.makeappssimple.abhimanyu.catfact.android.R
 import com.makeappssimple.abhimanyu.catfact.android.databinding.FragmentSettingsBinding
+import com.makeappssimple.abhimanyu.catfact.android.utils.getBuildVersionName
 
 class SettingsFragment : Fragment() {
 
@@ -44,5 +46,10 @@ class SettingsFragment : Fragment() {
             val intent = Intent(activity, OssLicensesMenuActivity::class.java)
             activity?.startActivity(intent)
         }
+        binding.root.context.resources.getString(R.string.recyclerview_item_layout_fact)
+        binding.fragmentSettingsTextviewVersion.text = String.format(
+            resources.getString(R.string.fragment_settings_version),
+            getBuildVersionName()
+        )
     }
 }
