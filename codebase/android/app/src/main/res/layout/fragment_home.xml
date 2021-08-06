@@ -15,8 +15,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fragment_home_imageview_no_internet"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:importantForAccessibility="no"
             app:imageSrc="@{@drawable/ic_no_internet}"
             app:layout_constraintBottom_toTopOf="@id/fragment_home_textview_no_internet"

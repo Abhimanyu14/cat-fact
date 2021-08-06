@@ -8,7 +8,7 @@
     android:viewportHeight="800"
     tools:ignore="VectorRaster">
     <path
-        android:fillColor="#1c8adb"
+        android:fillColor="#94693C"
         android:pathData="M400,400m-400,0a400,400 0,1 1,800 0a400,400 0,1 1,-800 0" />
     <path
         android:fillAlpha="0.42"

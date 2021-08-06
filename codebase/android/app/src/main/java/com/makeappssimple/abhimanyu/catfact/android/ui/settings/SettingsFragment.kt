@@ -42,7 +42,7 @@ class SettingsFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        binding.fragmentSettingsTextviewLicences.setOnClickListener {
+        binding.fragmentSettingsTextviewLicenses.setOnClickListener {
             val intent = Intent(activity, OssLicensesMenuActivity::class.java)
             activity?.startActivity(intent)
         }

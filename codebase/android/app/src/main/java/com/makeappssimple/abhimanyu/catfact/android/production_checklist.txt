@@ -1,10 +1,10 @@
 1. Accessibility
 2. Obfuscation and minification
-3. Configuration changes
+3. Configurations
 4. Localization
 5. Network error handling
 6. User permissions
 7. Credits
-8. Licences
+8. Licenses
 9. App info
-10.
+10. Light and dark modes

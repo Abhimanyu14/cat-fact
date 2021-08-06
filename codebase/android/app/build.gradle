@@ -76,7 +76,7 @@ dependencies {
     // Paging
     implementation "androidx.paging:paging-runtime-ktx:3.0.1"
 
-    // Open source licences
+    // Open source licenses
     implementation "com.google.android.gms:play-services-oss-licenses:17.0.0"
 
     // Testing

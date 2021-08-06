@@ -23,28 +23,55 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_credits"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/fragment_settings_credits"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
-
-            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/fragment_settings_textview_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:padding="16dp"
                 android:text="@string/fragment_settings_about"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/lightGrey" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_licences"
+                android:id="@+id/fragment_settings_textview_credits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:padding="16dp"
-                android:text="@string/fragment_settings_licences"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+                android:text="@string/fragment_settings_credits"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/lightGrey" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_settings_textview_licenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:text="@string/fragment_settings_licenses"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/lightGrey" />
 
         </LinearLayout>
 
