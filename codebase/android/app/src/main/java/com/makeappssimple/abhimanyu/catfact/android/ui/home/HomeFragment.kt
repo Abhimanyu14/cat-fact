@@ -69,8 +69,8 @@ class HomeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.action_credits -> {
-            val action = HomeFragmentDirections.actionHomeFragmentToCreditsFragment()
+        R.id.action_settings -> {
+            val action = HomeFragmentDirections.actionHomeFragmentToSettingsFragment()
             findNavController().navigate(action)
             true
         }

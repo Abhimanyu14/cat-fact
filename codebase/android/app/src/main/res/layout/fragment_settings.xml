@@ -7,11 +7,11 @@
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/fragment_credits_root_layout"
+        android:id="@+id/fragment_settings_root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.credits.CreditsFragment">
+        tools:context=".ui.settings.SettingsFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,69 +19,69 @@
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_credits_textview_heading_api"
+                android:id="@+id/fragment_settings_textview_heading_api"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="@string/fragment_credits_heading_api"
+                android:text="@string/fragment_settings_heading_api"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_credits_textview_api"
+                android:id="@+id/fragment_settings_textview_api"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="16dp"
-                android:text="@string/fragment_credits_api"
+                android:text="@string/fragment_settings_api"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_credits_textview_heading_images"
+                android:id="@+id/fragment_settings_textview_heading_images"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="@string/fragment_credits_heading_images"
+                android:text="@string/fragment_settings_heading_images"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fragment_credits_imageview_app_logo"
+                android:id="@+id/fragment_settings_imageview_app_logo"
                 android:layout_width="196dp"
                 android:layout_height="196dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:contentDescription="@string/fragment_credits_content_description_app_logo"
+                android:contentDescription="@string/fragment_settings_content_description_app_logo"
                 app:imageSrc="@{@drawable/ic_no_internet}"
                 tools:src="@drawable/ic_no_internet" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_credits_textview_app_logo"
+                android:id="@+id/fragment_settings_textview_app_logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="16dp"
-                android:text="@string/fragment_credits_app_logo"
+                android:text="@string/fragment_settings_app_logo"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fragment_credits_imageview_no_internet"
+                android:id="@+id/fragment_settings_imageview_no_internet"
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:contentDescription="@string/fragment_credits_content_description_no_internet"
+                android:contentDescription="@string/fragment_settings_content_description_no_internet"
                 app:imageSrc="@{@drawable/cat}"
                 tools:src="@drawable/cat" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_credits_textview_no_internet_connection"
+                android:id="@+id/fragment_settings_textview_no_internet_connection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="16dp"
-                android:text="@string/fragment_credits_no_internet_connection"
+                android:text="@string/fragment_settings_no_internet_connection"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
