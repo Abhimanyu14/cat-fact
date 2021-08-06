@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
     <data>
 
@@ -17,73 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_heading_api"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/fragment_settings_heading_api"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_api"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="16dp"
-                android:text="@string/fragment_settings_api"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_heading_images"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/fragment_settings_heading_images"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fragment_settings_imageview_app_logo"
-                android:layout_width="196dp"
-                android:layout_height="196dp"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:contentDescription="@string/fragment_settings_content_description_app_logo"
-                app:imageSrc="@{@drawable/ic_no_internet}"
-                tools:src="@drawable/ic_no_internet" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_app_logo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="16dp"
-                android:text="@string/fragment_settings_app_logo"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fragment_settings_imageview_no_internet"
-                android:layout_width="match_parent"
-                android:layout_height="256dp"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:contentDescription="@string/fragment_settings_content_description_no_internet"
-                app:imageSrc="@{@drawable/cat}"
-                tools:src="@drawable/cat" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragment_settings_textview_no_internet_connection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="16dp"
-                android:text="@string/fragment_settings_no_internet_connection"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
 
