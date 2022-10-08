@@ -1,6 +1,6 @@
 # Cat Fact
 
-An android app which fetches cat facts from internet.
+An android app that fetches cat facts from the internet using [this](https://catfact.ninja/fact) API.
 
 A simple Android app developed to demonstrate the following concepts.
 
@@ -42,3 +42,22 @@ Image by <a href="https://pixabay.com/users/io-images-1096650/?utm_source=link-a
 - <a href="https://proandroiddev.com/how-to-use-the-paging-3-library-in-android-5d128bb5b1d8">How to Use the Paging 3 Library in Android</a>
 
 - <a href="https://proandroiddev.com/how-to-use-the-paging-3-library-in-android-part-2-e2011070a37d">How to Use the Paging 3 Library in Android — Part 2</a>
+
+# License
+
+    Apache License 2.0
+   
+    Copyright 2022 Abhimanyu
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+   
