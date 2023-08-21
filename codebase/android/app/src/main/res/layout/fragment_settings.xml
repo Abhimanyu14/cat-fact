@@ -31,7 +31,7 @@
                 android:focusable="true"
                 android:padding="16dp"
                 android:text="@string/fragment_settings_about"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <View
                 android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                 android:focusable="true"
                 android:padding="16dp"
                 android:text="@string/fragment_settings_credits"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <View
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:focusable="true"
                 android:padding="16dp"
                 android:text="@string/fragment_settings_licenses"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <View
                 android:layout_width="match_parent"

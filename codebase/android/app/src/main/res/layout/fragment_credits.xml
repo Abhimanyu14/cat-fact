@@ -26,7 +26,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingTop="16dp"
                 android:text="@string/fragment_credits_heading_api"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -37,7 +37,7 @@
                 android:paddingVertical="8dp"
                 android:text="@string/fragment_credits_api"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <View
                 android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingTop="16dp"
                 android:text="@string/fragment_credits_heading_images"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -74,7 +74,7 @@
                 android:paddingTop="8dp"
                 android:text="@string/fragment_credits_app_logo"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/fragment_credits_imageview_no_internet"
@@ -95,13 +95,7 @@
                 android:paddingVertical="8dp"
                 android:text="@string/fragment_credits_no_internet_connection"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:background="@color/lightGrey" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
 

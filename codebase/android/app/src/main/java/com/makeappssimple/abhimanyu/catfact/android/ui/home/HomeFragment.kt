@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         context?.let { context ->
-            ConnectivityLiveData(context).observe(viewLifecycleOwner, { networkState ->
+            ConnectivityLiveData(context).observe(viewLifecycleOwner) { networkState ->
                 if (networkState == NetworkState.CONNECTED) {
                     binding.fragmentHomeImageviewNoInternet.visibility = View.GONE
                     binding.fragmentHomeTextviewNoInternet.visibility = View.GONE
@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
                     binding.fragmentHomeTextviewNoInternet.visibility = View.VISIBLE
                 }
                 initialConnectivityCheckCompleted = true
-            })
+            }
         }
     }
 
