@@ -1,7 +1,12 @@
 package com.makeappssimple.abhimanyu.catfact.android.ui.home
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -15,15 +20,18 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
-
     private val viewModel: HomeViewModel by viewModels()
-    private val mainActivityRecyclerViewAdapter by lazy { HomeFragmentRecyclerViewAdapter() }
+    private val mainActivityRecyclerViewAdapter by lazy {
+        HomeFragmentRecyclerViewAdapter()
+    }
     private var initialConnectivityCheckCompleted: Boolean = false
     private lateinit var binding: FragmentHomeBinding
 
+    @Suppress("DEPRECATION")
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         binding = FragmentHomeBinding.inflate(inflater)
 
@@ -44,7 +52,10 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
         context?.let { context ->
             ConnectivityLiveData(context).observe(viewLifecycleOwner) { networkState ->
@@ -54,7 +65,9 @@ class HomeFragment : Fragment() {
                     binding.fragmentHomeRecyclerView.visibility
                     fetchCatFacts()
                 } else if (!initialConnectivityCheckCompleted) {
-                    logError("No internet")
+                    logError(
+                        message = "No internet",
+                    )
                     binding.fragmentHomeImageviewNoInternet.visibility = View.VISIBLE
                     binding.fragmentHomeTextviewNoInternet.visibility = View.VISIBLE
                 }
@@ -63,27 +76,45 @@ class HomeFragment : Fragment() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+    @Suppress("DEPRECATION")
+    @Deprecated("Deprecated in Java")
+    override fun onCreateOptionsMenu(
+        menu: Menu,
+        inflater: MenuInflater,
+    ) {
         inflater.inflate(R.menu.menu_appbar, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.action_settings -> {
-            val action = HomeFragmentDirections.actionHomeFragmentToSettingsFragment()
-            findNavController().navigate(action)
-            true
-        }
-        else -> {
-            super.onOptionsItemSelected(item)
+    @Suppress("DEPRECATION")
+    @Deprecated("Deprecated in Java")
+    override fun onOptionsItemSelected(
+        item: MenuItem,
+    ): Boolean {
+        return when (item.itemId) {
+            R.id.action_settings -> {
+                val directions = HomeFragmentDirections.actionHomeFragmentToSettingsFragment()
+                findNavController().navigate(
+                    directions = directions,
+                )
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
     }
 
     private fun fetchCatFacts() {
-        logError("fetching cat facts")
+        logError(
+            message = "fetching cat facts",
+        )
         lifecycleScope.launch {
             viewModel.pagedCatFacts.collectLatest {
-                logError("submitting data")
+                logError(
+                    message = "submitting data",
+                )
                 mainActivityRecyclerViewAdapter.submitData(it)
             }
         }

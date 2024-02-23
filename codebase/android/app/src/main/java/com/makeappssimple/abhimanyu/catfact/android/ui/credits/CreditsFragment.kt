@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment
 import com.makeappssimple.abhimanyu.catfact.android.databinding.FragmentCreditsBinding
 
 class CreditsFragment : Fragment() {
-
     private lateinit var binding: FragmentCreditsBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         binding = FragmentCreditsBinding.inflate(inflater)
 
@@ -24,7 +24,10 @@ class CreditsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fragmentCreditsTextviewApi.movementMethod = LinkMovementMethod.getInstance()

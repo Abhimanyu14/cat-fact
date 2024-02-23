@@ -14,11 +14,18 @@ class HomeFragmentRecyclerViewLoadingStateAdapter(
     private val retry: () -> Unit
 ) : LoadStateAdapter<HomeFragmentRecyclerViewLoadingStateAdapter.MainActivityRecyclerViewLoadingStateViewHolder>() {
 
-    inner class MainActivityRecyclerViewLoadingStateViewHolder(private var binding: RecyclerviewLoadingStateLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(loadState: LoadState) {
-            logError("loading error : ${loadState !is LoadState.Loading}")
-            logError("loading progress : ${loadState is LoadState.Loading}")
+    inner class MainActivityRecyclerViewLoadingStateViewHolder(
+        private var binding: RecyclerviewLoadingStateLayoutBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(
+            loadState: LoadState,
+        ) {
+            logError(
+                message = "loading error : ${loadState !is LoadState.Loading}",
+            )
+            logError(
+                message = "loading progress : ${loadState is LoadState.Loading}",
+            )
 
             binding.recyclerviewLoadingStateLayoutButtonRetry.isVisible =
                 loadState !is LoadState.Loading
@@ -40,21 +47,25 @@ class HomeFragmentRecyclerViewLoadingStateAdapter(
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        loadState: LoadState
+        loadState: LoadState,
     ): MainActivityRecyclerViewLoadingStateViewHolder {
         return MainActivityRecyclerViewLoadingStateViewHolder(
             RecyclerviewLoadingStateLayoutBinding.inflate(
                 LayoutInflater.from(
                     parent.context
-                ), parent, false
+                ),
+                parent,
+                false,
             )
         )
     }
 
     override fun onBindViewHolder(
         holder: MainActivityRecyclerViewLoadingStateViewHolder,
-        loadState: LoadState
+        loadState: LoadState,
     ) {
-        holder.bind(loadState)
+        holder.bind(
+            loadState = loadState,
+        )
     }
 }

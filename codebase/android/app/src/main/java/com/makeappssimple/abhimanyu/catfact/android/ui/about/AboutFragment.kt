@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment
 import com.makeappssimple.abhimanyu.catfact.android.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
-
     private lateinit var binding: FragmentAboutBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         binding = FragmentAboutBinding.inflate(inflater)
 
@@ -24,7 +24,10 @@ class AboutFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fragmentAboutTextviewInfo.movementMethod = LinkMovementMethod.getInstance()

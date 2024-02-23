@@ -11,24 +11,35 @@ import com.makeappssimple.abhimanyu.catfact.android.R
 import com.makeappssimple.abhimanyu.catfact.android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
-    
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    override fun onCreate(
+        savedInstanceState: Bundle?,
+    ) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        appBarConfiguration = AppBarConfiguration(
+            navGraph = navController.graph,
+        )
+        setupActionBarWithNavController(
+            navController = navController,
+            configuration = appBarConfiguration,
+        )
     }
-    
+
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+        val navController = findNavController(
+            viewId = R.id.nav_host_fragment,
+        )
+        return navController.navigateUp(
+            appBarConfiguration = appBarConfiguration,
+        ) || super.onSupportNavigateUp()
     }
 }

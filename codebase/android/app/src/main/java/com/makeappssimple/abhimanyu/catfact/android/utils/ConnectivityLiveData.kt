@@ -1,6 +1,5 @@
 package com.makeappssimple.abhimanyu.catfact.android.utils
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.content.Context.CONNECTIVITY_SERVICE
 import android.net.ConnectivityManager
@@ -16,26 +15,33 @@ enum class NetworkState {
 }
 
 // Source - https://medium.com/@kiitvishal89/android-listening-to-connectivity-changes-the-correct-way-a614f0d6d2af
-class ConnectivityLiveData(context: Context) : LiveData<NetworkState>() {
+@Suppress("DEPRECATION")
+class ConnectivityLiveData(
+    context: Context,
+) : LiveData<NetworkState>() {
     private var connectivityManager =
         context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager?
     private var networkCallback = object : ConnectivityManager.NetworkCallback() {
         override fun onCapabilitiesChanged(
             network: Network,
-            networkCapabilities: NetworkCapabilities
+            networkCapabilities: NetworkCapabilities,
         ) {
-        
+
         }
-        
-        override fun onAvailable(network: Network) {
+
+        override fun onAvailable(
+            network: Network,
+        ) {
             postValue(NetworkState.CONNECTED)
         }
-        
-        override fun onLost(network: Network) {
+
+        override fun onLost(
+            network: Network,
+        ) {
             postValue(NetworkState.DISCONNECTED)
         }
     }
-    
+
     override fun onActive() {
         super.onActive()
         notifyInitialNetworkStatus()
@@ -45,13 +51,12 @@ class ConnectivityLiveData(context: Context) : LiveData<NetworkState>() {
             lollipopAndAboveRegisterNetworkCallback()
         }
     }
-    
+
     override fun onInactive() {
         super.onInactive()
         connectivityManager?.unregisterNetworkCallback(networkCallback)
     }
-    
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+
     private fun lollipopAndAboveRegisterNetworkCallback() {
         val networkRequest = NetworkRequest.Builder()
             .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
@@ -61,7 +66,7 @@ class ConnectivityLiveData(context: Context) : LiveData<NetworkState>() {
             .build()
         connectivityManager?.registerNetworkCallback(networkRequest, networkCallback)
     }
-    
+
     // Source - https://stackoverflow.com/a/57284789/9636037 - This method and dependant ones
     private fun notifyInitialNetworkStatus() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -70,7 +75,7 @@ class ConnectivityLiveData(context: Context) : LiveData<NetworkState>() {
             belowMarshmallowNotifyInitialNetworkStatus()
         }
     }
-    
+
     @RequiresApi(Build.VERSION_CODES.M)
     private fun marshmallowAndAboveNotifyInitialNetworkStatus() {
         var networkState = NetworkState.DISCONNECTED
@@ -86,7 +91,7 @@ class ConnectivityLiveData(context: Context) : LiveData<NetworkState>() {
         }
         postValue(networkState)
     }
-    
+
     private fun belowMarshmallowNotifyInitialNetworkStatus() {
         if (connectivityManager?.activeNetworkInfo?.isConnected == true) {
             postValue(NetworkState.CONNECTED)

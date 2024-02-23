@@ -12,8 +12,15 @@ import com.makeappssimple.abhimanyu.catfact.android.network.service.Api
 import kotlinx.coroutines.flow.Flow
 
 class HomeViewModel : ViewModel() {
-    
-    val pagedCatFacts: Flow<PagingData<CatFact>> = Pager(PagingConfig(pageSize = 10)) {
-        CatFactPagingSource(Api.retrofitService)
-    }.flow.cachedIn(viewModelScope)
+    val pagedCatFacts: Flow<PagingData<CatFact>> = Pager(
+        config = PagingConfig(
+            pageSize = 10,
+        ),
+    ) {
+        CatFactPagingSource(
+            apiService = Api.retrofitService,
+        )
+    }.flow.cachedIn(
+        scope = viewModelScope,
+    )
 }

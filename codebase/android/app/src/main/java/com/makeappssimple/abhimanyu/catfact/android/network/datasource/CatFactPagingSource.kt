@@ -8,15 +8,18 @@ import com.makeappssimple.abhimanyu.catfact.android.network.service.ApiService
 class CatFactPagingSource(
     private val apiService: ApiService,
 ) : PagingSource<Int, CatFact>() {
-    
     private var localKey = 1
     override suspend fun load(
-        params: LoadParams<Int>
+        params: LoadParams<Int>,
     ): LoadResult<Int, CatFact> {
         return try {
-            val apiResponse = apiService.getCatFact().apply { id = localKey++ }
+            val apiResponse = apiService.getCatFact().apply {
+                id = localKey++
+            }
             LoadResult.Page(
-                data = listOf(apiResponse),
+                data = listOf(
+                    element = apiResponse,
+                ),
                 prevKey = null,
                 nextKey = if (localKey < 16) {
                     localKey
@@ -24,12 +27,18 @@ class CatFactPagingSource(
                     null
                 },
             )
-        } catch (e: Exception) {
-            LoadResult.Error(e)
+        } catch (
+            exception: Exception,
+        ) {
+            LoadResult.Error(
+                throwable = exception,
+            )
         }
     }
-    
-    override fun getRefreshKey(state: PagingState<Int, CatFact>): Int? {
+
+    override fun getRefreshKey(
+        state: PagingState<Int, CatFact>,
+    ): Int? {
         // Try to find the page key of the closest page to anchorPosition, from
         // either the prevKey or the nextKey, but you need to handle nullability
         // here:
@@ -38,7 +47,9 @@ class CatFactPagingSource(
         //  * both prevKey and nextKey null -> anchorPage is the initial page, so
         //    just return null.
         return state.anchorPosition?.let { anchorPosition ->
-            val anchorPage = state.closestPageToPosition(anchorPosition)
+            val anchorPage = state.closestPageToPosition(
+                anchorPosition = anchorPosition,
+            )
             anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
         }
     }

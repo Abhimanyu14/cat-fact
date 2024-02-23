@@ -16,9 +16,11 @@ class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
 
+    @Suppress("DEPRECATION")
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         binding = FragmentSettingsBinding.inflate(inflater)
 
@@ -29,17 +31,24 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?,
+    ) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fragmentSettingsTextviewAbout.setOnClickListener {
             val action = SettingsFragmentDirections.actionSettingsFragmentToAboutFragment()
-            findNavController().navigate(action)
+            findNavController().navigate(
+                directions = action,
+            )
         }
 
         binding.fragmentSettingsTextviewCredits.setOnClickListener {
             val action = SettingsFragmentDirections.actionSettingsFragmentToCreditsFragment()
-            findNavController().navigate(action)
+            findNavController().navigate(
+                directions = action,
+            )
         }
 
         binding.fragmentSettingsTextviewLicenses.setOnClickListener {

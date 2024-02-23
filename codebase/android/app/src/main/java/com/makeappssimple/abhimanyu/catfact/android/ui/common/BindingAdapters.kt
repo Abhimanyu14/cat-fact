@@ -6,8 +6,13 @@ import androidx.databinding.BindingAdapter
 import coil.load
 
 @BindingAdapter("imageSrc")
-fun bindImage(imgView: ImageView, drawable: Drawable?) {
+fun bindImage(
+    imgView: ImageView,
+    drawable: Drawable?,
+) {
     drawable?.let {
-        imgView.load(drawable)
+        imgView.load(
+            data = drawable,
+        )
     }
 }
